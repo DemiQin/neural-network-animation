@@ -1,5 +1,5 @@
 # Neural Network Animation
-Watch a neural network think. Written in Python.
+Watch a feedforward neural network think. Written in Python.
 
 Requires the FFMPEG codec. To install use the command "brew install ffmpeg".
 
@@ -11,4 +11,8 @@ To run the program use the command "python main.py". It will generate a mp4 file
 
 You can read more about it and watch the video here:
 https://medium.com/@miloharper/how-to-generate-a-video-of-a-neural-network-learning-in-python-62f5c520e85c
+
+matplotlib should be installed correctly
+I change this peoject to load model files form cntk.
+BTW, changing parameters is really fussy, and need to be improved later
 
