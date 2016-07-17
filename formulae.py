@@ -18,10 +18,15 @@ def seed_random_number_generator():
 def random_weight():
     return 2 * random.random() - 1
 
+def get_circle_colour(output):
+    if output > 0.5:# after sigmoid
+        return 0, 1, 0
+    else:
+        return 1, 0, 0
 
 def get_synapse_colour(weight):
     if weight > 0:
-        return 0, 1, 0
+        return 0, 1, 0#green
     else:
         return 1, 0, 0
 

@@ -17,16 +17,20 @@ def generate_writer():
     rcParams['text.color'] = 'white'
     return fig, writer
 
+# def annotate_frame_simple():
+#     pyplot.text(1, parameters.height - 1, "TODO")
+# def annotate_frame():
+#     pyplot.text(1, parameters.height - 1, "TODO" )
+#
 
-def annotate_frame(i, e, average_error, example):
-    pyplot.text(1, parameters.height - 1, "Iteration #" + str(i))
-    pyplot.text(1, parameters.height - 2, "Training example #" + str(e + 1))
-    pyplot.text(1, parameters.output_y_position, "Desired output:")
-    pyplot.text(1, parameters.output_y_position - 1, str(example.output))
-    pyplot.text(1, parameters.bottom_margin + 1, "Inputs:")
-    pyplot.text(1, parameters.bottom_margin, str(example.inputs))
-    if average_error:
-        error_bar(average_error)
+
+def annotate_frame(example):
+    pyplot.text(1, parameters.output_y_position + 5, "Desired output:")
+    pyplot.text(1, parameters.output_y_position + 4, str(example.output), fontsize=10)
+    pyplot.text(1, parameters.output_y_position + 9, "Inputs:")
+    pyplot.text(1, parameters.output_y_position + 8, str(example.inputs[0:9]), fontsize=10)
+    pyplot.text(1, parameters.output_y_position + 7, str(example.inputs[9:18]), fontsize=10)
+
 
 
 def error_bar(average_error):
